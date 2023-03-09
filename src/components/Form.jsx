@@ -9,6 +9,7 @@ function Formulario(props){
         event.preventDefault()
         if(!generoFav || !artistaFav || generoFav.length < 3 || artistaFav.length < 6 || generoFav.indexOf(" ") != -1){
             console.error('Por favor chequea que la información sea correcta')
+            props.onSubmit(generoFav,artistaFav,'Por favor chequea que la información sea correcta')
             return
         }
         props.onSubmit(generoFav,artistaFav)
